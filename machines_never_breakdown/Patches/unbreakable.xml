@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- misc -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="OrbitalTradeBeacon"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="CommsConsole"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="GroundPenetratingScanner"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="LongRangeMineralScanner"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+
+<!-- power -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="WoodFiredGenerator"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="ChemfuelPoweredGenerator"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="Battery"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="SolarGenerator"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="GeothermalGenerator"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="WindTurbine"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+
+<!-- production -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="ElectricTailoringBench"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="TableMachining"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="ElectricStove"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="ElectricSmelter"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="Refinery"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="ComponentAssemblyBench"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="HydroponicsBasin"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="NutrientPasteDispenser"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+
+<!-- security -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="TurretGun"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+
+<!-- special -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="PsychicEmanator"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="InfiniteChemreactor"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+
+<!-- structure -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="Autodoor"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+
+<!-- temperature -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="Heater"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="Cooler"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</Operation>
+
+</Patch>

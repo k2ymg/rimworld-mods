@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<name>Apparel Recycling Recipe</name>
+<author>k2ymg</author>
+<url></url>
+<description>This mod add a recipe that allow you to recycle apparels at crafting spot.\n\nNote:\n- In fact, this is not recycling; it's smelting. The recycle rate is always 25%.\n- You can smelt 'psychic foil helmet' but no return anything.\n</description>
+<targetVersion>0.18.1722</targetVersion>
+</ModMetaData>

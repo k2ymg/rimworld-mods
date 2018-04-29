@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef>
+<defName>RecycleApparel</defName>
+<label>Recycle apparel</label>
+<description>Recycle apparel.</description>
+<jobString>Recycling apparel.</jobString>
+<workAmount>300</workAmount>
+<workSpeedStat>SmeltingSpeed</workSpeedStat>
+<workSkill>Crafting</workSkill>
+<effectWorking>Smelt</effectWorking>
+<soundWorking>Recipe_Smith</soundWorking>
+<specialProducts><li>Smelted</li></specialProducts>
+<ingredients>
+<li><filter><categories><li>Apparel</li></categories></filter>
+<count>1</count></li>
+</ingredients>
+<fixedIngredientFilter>
+<categories><li>Apparel</li></categories>
+</fixedIngredientFilter>
+<defaultIngredientFilter>
+<categories><li>Apparel</li></categories>
+<exceptedThingDefs><li>Apparel_PsychicFoilHelmet</li></exceptedThingDefs>
+</defaultIngredientFilter>
+<recipeUsers>
+<li>CraftingSpot</li>
+</recipeUsers>
+</RecipeDef>
+
+</Defs>

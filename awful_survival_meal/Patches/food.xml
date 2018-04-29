@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="MealSurvivalPack"]/ingestible</xpath>
+<value><tasteThought>AteAwfulSurvivalMeal</tasteThought></value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Pemmican"]/ingestible</xpath>
+<value><tasteThought>AteAwfulSurvivalMeal</tasteThought></value>
+</Operation>
+
+</Patch>

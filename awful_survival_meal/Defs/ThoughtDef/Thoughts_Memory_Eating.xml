@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThoughtDef>
+<defName>AteAwfulSurvivalMeal</defName>
+<durationDays>0.0001</durationDays>
+<stackLimit>1</stackLimit>
+<stages>
+<li>
+<label>ate awful survival meal</label>
+<description>ate awful survival meal</description>
+<baseMoodEffect>-10</baseMoodEffect>
+</li>
+</stages>
+</ThoughtDef>
+
+</Defs>
