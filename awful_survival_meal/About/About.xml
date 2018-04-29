@@ -2,7 +2,7 @@
 <ModMetaData>
 <name>Awful Survival Meal</name>
 <author>k2ymg</author>
-<url></url>
+<url>https://github.com/k2ymg/rimworld-mods</url>
 <description>This MOD add a negative mood effect to Pemmican and Packaged Survival Meal, and is *slightly* prevent colonists to eat survival meals. You still need forbid them, provide better meals and keep animals out. But no need always keep eyes on the chef.\n\nMood effect:\n 10 Lavish\n  5 Fine\n -4 Nutrient\n -7 Raw\n-10 This MOD\n-12 Kibble\n\nThe duration of this effect is very short.</description>
 <targetVersion>0.18.1722</targetVersion>
 </ModMetaData>

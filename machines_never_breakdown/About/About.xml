@@ -2,7 +2,7 @@
 <ModMetaData>
 <name>Machines Never Breakdown</name>
 <author>k2ymg</author>
-<url></url>
+<url>https://github.com/k2ymg/rimworld-mods</url>
 <description>This mod just remove the breakable property from all machines.\n\nThis is almost same as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1302867750]No Random Breakdown + No Random Shortcircruit[/url], but this still remain solar flare and short circuit incidents, and short circuit with rain.\n\n(If you not want to solar flare and/or short circuit incidents, you can disable those in scenario editor.)\n\nIf your save have a broken machine already, it's automatically fixed. (In this case, if you have enabled debug mode, and a colonist trying fixed broken machines, it may couse an internal error, but it is not critical. You can continue game. (or cancel repaire task if you not want to wast a component.)</description>
 <targetVersion>0.18.1722</targetVersion>
 </ModMetaData>
