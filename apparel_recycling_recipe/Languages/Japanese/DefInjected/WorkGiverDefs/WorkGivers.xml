@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-<label>衣服をリサイクルする</label>
-<verb>リサイクル</verb>
-<gerund>リサイクル</gerund>
+<DoBillsRecycleApparel.label>衣服をリサイクルする</DoBillsRecycleApparel.label>
+<DoBillsRecycleApparel.verb>リサイクル</DoBillsRecycleApparel.verb>
+<DoBillsRecycleApparel.gerund>リサイクル</DoBillsRecycleApparel.gerund>
 
 </LanguageData>
