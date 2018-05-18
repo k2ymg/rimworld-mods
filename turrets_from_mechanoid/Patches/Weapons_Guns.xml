@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationReplace">
+<xpath>*/ThingDef[defName="Gun_ChargeLance"]/destroyOnDrop</xpath>
+<value><destroyOnDrop>False</destroyOnDrop></value>
+</Operation>
+<Operation Class="PatchOperationReplace">
+<xpath>*/ThingDef[defName="Gun_ChargeLance"]/menuHidden</xpath>
+<value><menuHidden>False</menuHidden></value>
+</Operation>
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_ChargeLance"]</xpath>
+<value><costList><Steel>80</Steel><Plasteel>80</Plasteel><Component>20</Component></costList></value>
+</Operation>
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_ChargeLance"]</xpath>
+<value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
+</Operation>
+
+
+<Operation Class="PatchOperationReplace">
+<xpath>*/ThingDef[defName="Gun_InfernoCannon"]/destroyOnDrop</xpath>
+<value><destroyOnDrop>False</destroyOnDrop></value>
+</Operation>
+<Operation Class="PatchOperationReplace">
+<xpath>*/ThingDef[defName="Gun_InfernoCannon"]/menuHidden</xpath>
+<value><menuHidden>False</menuHidden></value>
+</Operation>
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_InfernoCannon"]</xpath>
+<value><costList><Steel>80</Steel><Plasteel>80</Plasteel><Component>20</Component></costList></value>
+</Operation>
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_InfernoCannon"]</xpath>
+<value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
+</Operation>
+
+
+<Operation Class="PatchOperationReplace">
+<xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]/destroyOnDrop</xpath>
+<value><destroyOnDrop>False</destroyOnDrop></value>
+</Operation>
+<Operation Class="PatchOperationReplace">
+<xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]/menuHidden</xpath>
+<value><menuHidden>False</menuHidden></value>
+</Operation>
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]</xpath>
+<value><costList><Steel>80</Steel><Plasteel>80</Plasteel><Component>20</Component></costList></value>
+</Operation>
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]</xpath>
+<value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_Minigun"]</xpath>
+<value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_TripleRocket"]</xpath>
+<value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_DoomsdayRocket"]</xpath>
+<value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
+</Operation>
+
+</Patch>

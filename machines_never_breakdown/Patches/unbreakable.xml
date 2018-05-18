@@ -110,4 +110,65 @@
 <xpath>*/ThingDef[defName="Cooler"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
 </Operation>
 
+<!-- for my mods -->
+<Operation Class="PatchOperationSequence">
+<success>Always</success>
+<operations>
+<li Class="PatchOperationTest">
+<xpath>*/ThingDef[defName="SolarPoweredCeilingLight"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+<li Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="SolarPoweredCeilingLight"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+</operations>
+</Operation>
+
+<Operation Class="PatchOperationSequence">
+<success>Always</success>
+<operations>
+<li Class="PatchOperationTest">
+<xpath>*/ThingDef[defName="SolarPoweredLamppost"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+<li Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="SolarPoweredLamppost"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+</operations>
+</Operation>
+
+<Operation Class="PatchOperationSequence">
+<success>Always</success>
+<operations>
+<li Class="PatchOperationTest">
+<xpath>*/ThingDef[defName="TurretGun_ChargeLance"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+<li Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="TurretGun_ChargeLance"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+</operations>
+</Operation>
+
+<Operation Class="PatchOperationSequence">
+<success>Always</success>
+<operations>
+<li Class="PatchOperationTest">
+<xpath>*/ThingDef[defName="TurretGun_InfernoCannon"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+<li Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="TurretGun_InfernoCannon"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+</operations>
+</Operation>
+
+<Operation Class="PatchOperationSequence">
+<success>Always</success>
+<operations>
+<li Class="PatchOperationTest">
+<xpath>*/ThingDef[defName="TurretGun_ChargeBlasterHeavy"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+<li Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="TurretGun_ChargeBlasterHeavy"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+</li>
+</operations>
+</Operation>
+
 </Patch>

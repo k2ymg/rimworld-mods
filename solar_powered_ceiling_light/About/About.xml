@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<name>Solar Powered Ceiling Light</name>
+<author>k2ymg</author>
+<url>https://github.com/k2ymg/rimworld-mods</url>
+<description>This mod adds two lights.\n1 - Soler powered ceiling light.\n2 - Soler powered lamp post.\n\n\nBoth lights works standalone without connect to power net but not work well in bad weather or winter season.\n\nSorry, because I have not a paint skill, 1 is have't image, 2 is same as (broken) ancient lamp post.\n\nIf you want to disable 'breakable', put my mod after this.</description>
+<targetVersion>0.18.1722</targetVersion>
+</ModMetaData>
