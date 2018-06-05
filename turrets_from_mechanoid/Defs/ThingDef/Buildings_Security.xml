@@ -20,8 +20,8 @@
 <stealable>false</stealable>
 <rotatable>false</rotatable>
 <statBases>
-<MaxHitPoints>100</MaxHitPoints>
-<Flammability>1.0</Flammability>
+<MaxHitPoints>1000</MaxHitPoints>
+<Flammability>0.0</Flammability>
 <WorkToBuild>2500</WorkToBuild>
 <Mass>100</Mass>
 <Beauty>-20</Beauty>
@@ -29,15 +29,10 @@
 <tradeability>Never</tradeability>
 <tickerType>Normal</tickerType>
 <comps>
-<li Class="CompProperties_Explosive">
-<explosiveRadius>3.9</explosiveRadius>
-<explosiveDamageType>Bomb</explosiveDamageType>
-<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-</li>
 <li Class="CompProperties_Forbiddable"/>
 <li Class="CompProperties_Power">
 <compClass>CompPowerTrader</compClass>
-<basePowerConsumption>100</basePowerConsumption>
+<basePowerConsumption>10</basePowerConsumption>
 </li>
 <li Class="CompProperties_Flickable"/>
 </comps>
@@ -86,10 +81,10 @@
 <destroyOnDrop>true</destroyOnDrop>
 <useHitPoints>false</useHitPoints>
 <statBases>
-<AccuracyTouch>0.8</AccuracyTouch>
-<AccuracyShort>0.9</AccuracyShort>
+<AccuracyTouch>0.99</AccuracyTouch>
+<AccuracyShort>0.99</AccuracyShort>
 <AccuracyMedium>0.99</AccuracyMedium>
-<AccuracyLong>0.9</AccuracyLong>
+<AccuracyLong>0.99</AccuracyLong>
 <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
 <DeteriorationRate>0</DeteriorationRate>
 </statBases>
@@ -105,7 +100,7 @@
 <warmupTime>5.0</warmupTime>
 <range>50</range>
 <burstShotCount>6</burstShotCount>
-<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
 <soundCast>InfernoCannon_Fire</soundCast>
 <soundCastTail>GunTail_Heavy</soundCastTail>
 <muzzleFlashScale>14</muzzleFlashScale>
@@ -131,8 +126,8 @@
 <stealable>false</stealable>
 <rotatable>false</rotatable>
 <statBases>
-<MaxHitPoints>100</MaxHitPoints>
-<Flammability>1.0</Flammability>
+<MaxHitPoints>1000</MaxHitPoints>
+<Flammability>0.0</Flammability>
 <WorkToBuild>2500</WorkToBuild>
 <Mass>100</Mass>
 <Beauty>-20</Beauty>
@@ -140,15 +135,10 @@
 <tradeability>Never</tradeability>
 <tickerType>Normal</tickerType>
 <comps>
-<li Class="CompProperties_Explosive">
-<explosiveRadius>3.9</explosiveRadius>
-<explosiveDamageType>Bomb</explosiveDamageType>
-<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-</li>
 <li Class="CompProperties_Forbiddable"/>
 <li Class="CompProperties_Power">
 <compClass>CompPowerTrader</compClass>
-<basePowerConsumption>100</basePowerConsumption>
+<basePowerConsumption>10</basePowerConsumption>
 </li>
 <li Class="CompProperties_Flickable"/>
 </comps>
@@ -216,7 +206,7 @@
 <warmupTime>4.5</warmupTime>
 <range>50</range>
 <burstShotCount>2</burstShotCount>
-<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
 <soundCast>InfernoCannon_Fire</soundCast>
 <soundCastTail>GunTail_Heavy</soundCastTail>
 <muzzleFlashScale>14</muzzleFlashScale>
@@ -242,8 +232,8 @@
 <stealable>false</stealable>
 <rotatable>false</rotatable>
 <statBases>
-<MaxHitPoints>100</MaxHitPoints>
-<Flammability>1.0</Flammability>
+<MaxHitPoints>1000</MaxHitPoints>
+<Flammability>0.0</Flammability>
 <WorkToBuild>2500</WorkToBuild>
 <Mass>100</Mass>
 <Beauty>-20</Beauty>
@@ -251,15 +241,10 @@
 <tradeability>Never</tradeability>
 <tickerType>Normal</tickerType>
 <comps>
-<li Class="CompProperties_Explosive">
-<explosiveRadius>3.9</explosiveRadius>
-<explosiveDamageType>Bomb</explosiveDamageType>
-<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-</li>
 <li Class="CompProperties_Forbiddable"/>
 <li Class="CompProperties_Power">
 <compClass>CompPowerTrader</compClass>
-<basePowerConsumption>100</basePowerConsumption>
+<basePowerConsumption>10</basePowerConsumption>
 </li>
 <li Class="CompProperties_Flickable"/>
 </comps>
@@ -308,10 +293,10 @@
 <destroyOnDrop>true</destroyOnDrop>
 <useHitPoints>false</useHitPoints>
 <statBases>
-<AccuracyTouch>0.8</AccuracyTouch>
-<AccuracyShort>0.7</AccuracyShort>
-<AccuracyMedium>0.5</AccuracyMedium>
-<AccuracyLong>0.3</AccuracyLong>
+<AccuracyTouch>0.99</AccuracyTouch>
+<AccuracyShort>0.99</AccuracyShort>
+<AccuracyMedium>0.99</AccuracyMedium>
+<AccuracyLong>0.99</AccuracyLong>
 <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
 <DeteriorationRate>0</DeteriorationRate>
 </statBases>
@@ -353,8 +338,8 @@
 <stealable>false</stealable>
 <rotatable>false</rotatable>
 <statBases>
-<MaxHitPoints>100</MaxHitPoints>
-<Flammability>1.0</Flammability>
+<MaxHitPoints>1000</MaxHitPoints>
+<Flammability>0.0</Flammability>
 <WorkToBuild>2500</WorkToBuild>
 <Mass>100</Mass>
 <Beauty>-20</Beauty>
@@ -362,15 +347,10 @@
 <tradeability>Never</tradeability>
 <tickerType>Normal</tickerType>
 <comps>
-<li Class="CompProperties_Explosive">
-<explosiveRadius>3.9</explosiveRadius>
-<explosiveDamageType>Bomb</explosiveDamageType>
-<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-</li>
 <li Class="CompProperties_Forbiddable"/>
 <li Class="CompProperties_Power">
 <compClass>CompPowerTrader</compClass>
-<basePowerConsumption>100</basePowerConsumption>
+<basePowerConsumption>10</basePowerConsumption>
 </li>
 <li Class="CompProperties_Flickable"/>
 </comps>
@@ -419,10 +399,10 @@
 <destroyOnDrop>true</destroyOnDrop>
 <useHitPoints>false</useHitPoints>
 <statBases>
-<AccuracyTouch>0.8</AccuracyTouch>
-<AccuracyShort>0.9</AccuracyShort>
+<AccuracyTouch>0.99</AccuracyTouch>
+<AccuracyShort>0.99</AccuracyShort>
 <AccuracyMedium>0.99</AccuracyMedium>
-<AccuracyLong>0.95</AccuracyLong>
+<AccuracyLong>0.99</AccuracyLong>
 <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
 <DeteriorationRate>0</DeteriorationRate>
 </statBases>
@@ -463,8 +443,8 @@
 <stealable>false</stealable>
 <rotatable>false</rotatable>
 <statBases>
-<MaxHitPoints>100</MaxHitPoints>
-<Flammability>1.0</Flammability>
+<MaxHitPoints>1000</MaxHitPoints>
+<Flammability>0.0</Flammability>
 <WorkToBuild>2500</WorkToBuild>
 <Mass>100</Mass>
 <Beauty>-20</Beauty>
@@ -472,15 +452,10 @@
 <tradeability>Never</tradeability>
 <tickerType>Normal</tickerType>
 <comps>
-<li Class="CompProperties_Explosive">
-<explosiveRadius>3.9</explosiveRadius>
-<explosiveDamageType>Bomb</explosiveDamageType>
-<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-</li>
 <li Class="CompProperties_Forbiddable"/>
 <li Class="CompProperties_Power">
 <compClass>CompPowerTrader</compClass>
-<basePowerConsumption>100</basePowerConsumption>
+<basePowerConsumption>10</basePowerConsumption>
 </li>
 <li Class="CompProperties_Flickable"/>
 </comps>
@@ -530,10 +505,10 @@
 <destroyOnDrop>true</destroyOnDrop>
 <useHitPoints>false</useHitPoints>
 <statBases>
-<AccuracyTouch>0.9</AccuracyTouch>
-<AccuracyShort>0.7</AccuracyShort>
-<AccuracyMedium>0.6</AccuracyMedium>
-<AccuracyLong>0.4</AccuracyLong>
+<AccuracyTouch>0.99</AccuracyTouch>
+<AccuracyShort>0.99</AccuracyShort>
+<AccuracyMedium>0.99</AccuracyMedium>
+<AccuracyLong>0.99</AccuracyLong>
 <RangedWeapon_Cooldown>8.4</RangedWeapon_Cooldown>
 <DeteriorationRate>0</DeteriorationRate>
 </statBases>
@@ -576,8 +551,8 @@
 <stealable>false</stealable>
 <rotatable>false</rotatable>
 <statBases>
-<MaxHitPoints>100</MaxHitPoints>
-<Flammability>1.0</Flammability>
+<MaxHitPoints>1000</MaxHitPoints>
+<Flammability>0.0</Flammability>
 <WorkToBuild>2500</WorkToBuild>
 <Mass>100</Mass>
 <Beauty>-20</Beauty>
@@ -585,15 +560,10 @@
 <tradeability>Never</tradeability>
 <tickerType>Normal</tickerType>
 <comps>
-<li Class="CompProperties_Explosive">
-<explosiveRadius>3.9</explosiveRadius>
-<explosiveDamageType>Bomb</explosiveDamageType>
-<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-</li>
 <li Class="CompProperties_Forbiddable"/>
 <li Class="CompProperties_Power">
 <compClass>CompPowerTrader</compClass>
-<basePowerConsumption>100</basePowerConsumption>
+<basePowerConsumption>10</basePowerConsumption>
 </li>
 <li Class="CompProperties_Flickable"/>
 </comps>
@@ -642,10 +612,10 @@
 <destroyOnDrop>true</destroyOnDrop>
 <useHitPoints>false</useHitPoints>
 <statBases>
-<AccuracyTouch>0.8</AccuracyTouch>
-<AccuracyShort>0.9</AccuracyShort>
-<AccuracyMedium>0.8</AccuracyMedium>
-<AccuracyLong>0.7</AccuracyLong>
+<AccuracyTouch>0.99</AccuracyTouch>
+<AccuracyShort>0.99</AccuracyShort>
+<AccuracyMedium>0.99</AccuracyMedium>
+<AccuracyLong>0.99</AccuracyLong>
 <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
 <DeteriorationRate>0</DeteriorationRate>
 </statBases>
