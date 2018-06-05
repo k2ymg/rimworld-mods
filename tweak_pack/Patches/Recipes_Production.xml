@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationAdd">
+<xpath>*/RecipeDef[defName="SmeltWeapon"]</xpath>
+<value><defaultIngredientFilter>
+<categories><li>Weapons</li></categories>
+<exceptedThingDefs>
+<li>Gun_TripleRocket</li>
+<li>Gun_DoomsdayRocket</li>
+</exceptedThingDefs></defaultIngredientFilter></value>
+</Operation>
+
+</Patch>

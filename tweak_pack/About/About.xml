@@ -3,6 +3,16 @@
 <name>Tweak Pack</name>
 <author>k2ymg</author>
 <url>https://github.com/k2ymg/rimworld-mods</url>
-<description>N/A.</description>
+<description>
+# Shelf
+- Strage priority: Normal.
+- Strage filter: All clear.
+
+# Recipe, CremateCorpse
+- Strage filter: excepted AllowCorpsesColonist.
+
+# Recipe, SmeltWeapon
+- Strage filter: excepted Gun_TripleRocket and Gun_DoomsdayRocket.
+</description>
 <targetVersion>0.18.1722</targetVersion>
 </ModMetaData>
