@@ -9,14 +9,18 @@
 <xpath>*/ThingDef[defName="Gun_ChargeLance"]/menuHidden</xpath>
 <value><menuHidden>False</menuHidden></value>
 </Operation>
-<Operation Class="PatchOperationAdd">
+<!--<Operation Class="PatchOperationAdd">
 <xpath>*/ThingDef[defName="Gun_ChargeLance"]</xpath>
 <value><costList><Steel>80</Steel><Plasteel>80</Plasteel><Component>20</Component></costList></value>
-</Operation>
+</Operation>-->
 <Operation Class="PatchOperationAdd">
 <xpath>*/ThingDef[defName="Gun_ChargeLance"]</xpath>
 <value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
 </Operation>
+<!--<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_ChargeLance"]/statBases</xpath>
+<value><MarketValue>0</MarketValue></value>
+</Operation>-->
 
 
 <Operation Class="PatchOperationReplace">
@@ -27,14 +31,18 @@
 <xpath>*/ThingDef[defName="Gun_InfernoCannon"]/menuHidden</xpath>
 <value><menuHidden>False</menuHidden></value>
 </Operation>
-<Operation Class="PatchOperationAdd">
+<!--<Operation Class="PatchOperationAdd">
 <xpath>*/ThingDef[defName="Gun_InfernoCannon"]</xpath>
 <value><costList><Steel>80</Steel><Plasteel>80</Plasteel><Component>20</Component></costList></value>
-</Operation>
+</Operation>-->
 <Operation Class="PatchOperationAdd">
 <xpath>*/ThingDef[defName="Gun_InfernoCannon"]</xpath>
 <value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
 </Operation>
+<!--<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_InfernoCannon"]/statBases</xpath>
+<value><MarketValue>0</MarketValue></value>
+</Operation>-->
 
 
 <Operation Class="PatchOperationReplace">
@@ -45,14 +53,19 @@
 <xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]/menuHidden</xpath>
 <value><menuHidden>False</menuHidden></value>
 </Operation>
-<Operation Class="PatchOperationAdd">
+<!--<Operation Class="PatchOperationAdd">
 <xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]</xpath>
 <value><costList><Steel>80</Steel><Plasteel>80</Plasteel><Component>20</Component></costList></value>
-</Operation>
+</Operation>-->
 <Operation Class="PatchOperationAdd">
 <xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]</xpath>
 <value><resourceReadoutPriority>Middle</resourceReadoutPriority></value>
 </Operation>
+<!--<Operation Class="PatchOperationAdd">
+<xpath>*/ThingDef[defName="Gun_ChargeBlasterHeavy"]/statBases</xpath>
+<value><MarketValue>0</MarketValue></value>
+</Operation>-->
+
 
 <Operation Class="PatchOperationAdd">
 <xpath>*/ThingDef[defName="Gun_Minigun"]</xpath>
