@@ -4,15 +4,23 @@
 <author>k2ymg</author>
 <url>https://github.com/k2ymg/rimworld-mods</url>
 <description>
+Fine tunings.
+
 # Shelf
-- Strage priority: Normal.
-- Strage filter: All clear.
+- Storage priority: Normal.
+- Storage filter: All clear.
 
 # Recipe, CremateCorpse
-- Strage filter: excepted AllowCorpsesColonist.
+- Storage filter: excepted AllowCorpsesColonist.
 
 # Recipe, SmeltWeapon
-- Strage filter: excepted Gun_TripleRocket and Gun_DoomsdayRocket.
+- Storage filter: excepted Gun_TripleRocket and Gun_DoomsdayRocket.
+
+# Recipe, BurnApparel
+- HP range: 0 to 50%
+
+# Weapons and Apparels
+- Disable random rotation.
 </description>
-<targetVersion>0.18.1722</targetVersion>
+<targetVersion>0.19.0</targetVersion>
 </ModMetaData>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Shelf default -->
+<Operation Class="PatchOperationReplace">
+<xpath>*/ThingDef[defName="Shelf"]/building/defaultStorageSettings/priority</xpath>
+<value><priority>Normal</priority></value>
+</Operation>
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[defName="Shelf"]/building/defaultStorageSettings/filter/categories</xpath>
+</Operation>
+
+
+<!-- Cremate default -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/RecipeDef[defName="CremateCorpse"]/defaultIngredientFilter/specialFiltersToAllow/li[text()="AllowCorpsesColonist"]</xpath>
+</Operation>
+
+
+<!-- Smelt default
+v 0.18 exceptedThingDefs
+v 0.19 disallowedThingDefs
+-->
+<Operation Class="PatchOperationAdd">
+<xpath>*/RecipeDef[defName="SmeltWeapon"]</xpath>
+<value><defaultIngredientFilter>
+<categories><li>Weapons</li></categories>
+<disallowedThingDefs>
+<li>Gun_TripleRocket</li>
+<li>Gun_DoomsdayRocket</li>
+</disallowedThingDefs></defaultIngredientFilter></value>
+</Operation>
+
+
+<!-- BurnApparel default -->
+<Operation Class="PatchOperationAdd">
+<xpath>*/RecipeDef[defName="BurnApparel"]/defaultIngredientFilter</xpath>
+<value><allowedHitPointsPercents><min>0</min><max>0.5</max></allowedHitPointsPercents></value>
+</Operation>
+
+
+<!-- Random rotation -->
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[@Name="ApparelBase"]/graphicData/onGroundRandomRotateAngle</xpath>
+</Operation>
+<Operation Class="PatchOperationRemove">
+<xpath>*/ThingDef[@Name="BaseWeapon"]/graphicData/onGroundRandomRotateAngle</xpath>
+</Operation>
+
+</Patch>
