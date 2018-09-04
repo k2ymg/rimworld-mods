@@ -7,9 +7,11 @@ $dir_name = $(split-path $(get-location) -leaf)
 $dst_root='C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\Mods'
 $dst = join-path $dst_root $dir_name
 
-# clean
 if(test-path $dst){
+	# clean
  	remove-item $dst\* -recurse -exclude PublishedFileId.txt
+}else{
+	new-item $dst -itemType directory | out-null
 }
 
 # copy
