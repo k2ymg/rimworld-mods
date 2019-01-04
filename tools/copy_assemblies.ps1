@@ -1,5 +1,5 @@
 
-$src='C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\RimWorldWin_Data\Managed'
+$src='C:\Program Files (x86)\Steam\SteamApps\common\RimWorld\RimWorldWin64_Data\Managed'
 $dst='..\rimworld-assemblies'
 
 mkdir -force $dst | out-null

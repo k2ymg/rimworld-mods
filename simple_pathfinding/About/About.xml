@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<name>Simple Pathfinding</name>
+<author>k2ymg</author>
+<url>https://github.com/k2ymg/rimworld-mods</url>
+<description>
+Simple brute force path-finding.
+
+Pawns takes a bit better path than vanira, but reduce performance. Not good for many colonists, animals, caravan or raiders, large or complex map.
+</description>
+<targetVersion>1.0.2083</targetVersion>
+</ModMetaData>

@@ -17,6 +17,6 @@ if(test-path $dst){
 # copy
 copy-item About $dst -recurse -force
 copy-item Assemblies $dst -recurse -force -errorAction silentlyContinue -exclude *.pdb
-@('Defs', 'Languages', 'Patches', 'Textures') | foreach-object {
+@('Defs', 'Languages', 'Patches', 'Textures', 'Other') | foreach-object {
 	copy-item $_ $dst -recurse -force -errorAction silentlyContinue
 }

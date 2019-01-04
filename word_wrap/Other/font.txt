@@ -1,0 +1,7 @@
+;font_name:MS Gothic
+;tiny_size:12
+;tiny_pad:0
+;small_size:14
+;small_pad:0
+;medium_size:21
+;medium_pad:0
