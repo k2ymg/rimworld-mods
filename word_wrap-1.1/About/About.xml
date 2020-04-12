@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<name>Word Wrap 1.1</name>
+<packageId>k2ymg.WordWrap</packageId>
+<author>k2ymg</author>
+<url>https://github.com/k2ymg/rimworld-mods</url>
+<description>
+This mod improve word-wrapping for japanese language.
+</description>
+<supportedVersions><li>1.1</li></supportedVersions>
+</ModMetaData>
