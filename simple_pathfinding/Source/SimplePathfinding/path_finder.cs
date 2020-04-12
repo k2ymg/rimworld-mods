@@ -493,34 +493,6 @@ public static class MyPathFinder
 		}
 #endif
 		sOpenNodeQueue.clear(sDrafted);
-
-#if false
-		OpenNode q = sOpenSet_head;
-		if(q == null)
-			return;
-		
-		if(sOpenNodePool_head == null)
-			sOpenNodePool_head = sOpenSet_head;
-		else
-			sOpenNodePool_tail.next = sOpenSet_head;
-		sOpenNodePool_tail = sOpenSet_tail;
-
-#if DEBUG_DRAW_OPEN_NODE
-		/*if(sTraverseParms.pawn != null && sTraverseParms.pawn.Drafted){
-			q = sOpenSet_head;
-			while(q != null){
-				int x = q.xy >> 16;
-				int y = q.xy & 0xffff;
-				IntVec3 c = new IntVec3(x, 0, y);			
-				sMap.debugDrawer.FlashCell(c, 0f, q.f.ToString(), 100);
-				q = q.next;
-			}
-		}*/
-#endif
-
-		sOpenSet_head = null;
-		sOpenSet_tail = null;
-#endif
 	}
 
 	private static NodeSet NodeSet_get(int index)
@@ -681,11 +653,11 @@ public static class MyPathFinder
 			if(c == int.MaxValue){
 				return -1;
 			}
-			if(building as Building_Door != null){
-				is_door = true;
+			if((building as Building_Door) != null){
 				if(smallDeadEndRoom(x, y)){
 					return -1;
 				}
+				is_door = true;
 			}
 			cost += c;
 		}
@@ -808,18 +780,23 @@ public static class MyPathFinder
 		int index = sMap.cellIndices.CellToIndex(x, y);
 		Region r_door = map_regions[index];
 		if(r_door == null || r_door.door == null)
-			return false;
+			return false;// not door
 
 		IntVec3 end = new IntVec3(sEndX, 0, sEndY);
 		if(r_door.extentsClose.Contains(end))
-			return false;
+			return false;// contain destination
+
+		if(r_door.links.Count != 2)
+			return false;// defective door
 
 		int px = sCurrentX;
 		int py = sCurrentY;
 		Region r_a = map_regions[sMap.cellIndices.CellToIndex(px, py)];
 		Region r_b = otherSideRegion(r_door, r_a);
 		if(r_b == null)
-			return false;
+			return false;// no other side (maybe not come here)
+		if(r_b.IsDoorway)
+			return false;// anather door...
 
 		Room room = r_b.Room;
 		List<Region> regions = room.Regions;
@@ -829,7 +806,7 @@ public static class MyPathFinder
 		Pawn pawn = sTraverseParms.pawn;
 		foreach(Region region in regions){
 			if(region.extentsClose.Overlaps(sDestRect))
-				return false;
+				return false;// contain goal
 			foreach(RegionLink link in region.links){
 				Region r = link.GetOtherRegion(region);
 				if(!r.IsDoorway)

@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 <name>Machines Never Breakdown</name>
+<packageId>k2ymg.MachinesNeverBreakdown</packageId>
 <author>k2ymg</author>
 <url></url>
-<description>CHANGED:\nNow, this mod remove CompProperties_Breakdownable from all ThingDef(s) by one shot. I'm not sure, but it will probably effects other mods too, so you should put this mod at last order.\n\nThis mod just remove the breakable property from all machines.\n\nThis is almost same as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1302867750]No Random Breakdown + No Random Shortcircruit[/url], but this still remain solar flare and short circuit incidents, and short circuit with rain.\n\n(If you not want to solar flare and/or short circuit incidents, you can disable those in scenario editor.)\n\nIf your save have a broken machine already, it's automatically fixed. (In this case, if you have enabled debug mode, and a colonist trying fixed broken machines, it may couse an internal error, but it is not critical. You can continue game. (or cancel repaire task if you not want to wast a component.)</description>
-<targetVersion>0.18.1722</targetVersion>
+<description>CHANGED:\nNow, this mod remove CompProperties_Breakdownable from all ThinDef(s) by one shot. I'm not sure, but it will probably effects other mods too, so you should put this mod at last order.\n\nThis mod just remove the breakable property from all machines.\n\nThis is almost same as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1302867750]No Random Breakdown + No Random Shortcircruit[/url], but this still remain solar flare and short circuit incidents, and short circuit with rain.\n\n(If you not want to solar flare and/or short circuit incidents, you can disable those in scenario editor.)\n\nIf your save have a broken machine already, it's automatically fixed. (In this case, if you have enabled debug mode, and a colonist trying fixed broken machines, it may couse an internal error, but it is not critical. You can continue game. (or cancel repaire task if you not want to wast a component.)</description>
+<supportedVersions><li>1.0</li><li>1.1</li></supportedVersions>
 </ModMetaData>

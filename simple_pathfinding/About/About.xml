@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 <name>Simple Pathfinding</name>
+<packageId>k2ymg.SimplePathfinding</packageId>
 <author>k2ymg</author>
 <url>https://github.com/k2ymg/rimworld-mods</url>
 <description>
@@ -8,5 +9,5 @@ Simple brute force path-finding.
 
 Pawns takes a bit better path than vanira, but reduce performance. Not good for many colonists, animals, caravan or raiders, large or complex map.
 </description>
-<targetVersion>1.0.2083</targetVersion>
+<supportedVersions><li>1.0</li><li>1.1</li></supportedVersions>
 </ModMetaData>

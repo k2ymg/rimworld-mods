@@ -8,5 +8,6 @@ THIS IS FOR JAPANESE USERS.
 
 This mod improve word-wrapping for japanese language.
 </description>
-<targetVersion>1.0.0</targetVersion>
+<supportedVersions><li>1.0</li></supportedVersions>
+<!--<targetVersion>1.0.0</targetVersion>-->
 </ModMetaData>

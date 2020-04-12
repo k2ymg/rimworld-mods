@@ -22,5 +22,6 @@ Fine tunings.
 # Weapons and Apparels
 - Disable random rotation.
 </description>
-<targetVersion>0.19.0</targetVersion>
+<supportedVersions><li>1.0</li></supportedVersions>
+<!--<targetVersion>1.0.0</targetVersion>-->
 </ModMetaData>
