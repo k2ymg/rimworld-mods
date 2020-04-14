@@ -68,6 +68,7 @@ namespace word_wrap
 			switch(c){
 			case 0x300c:// left corner bracket
 			case 0xff08:// fullwidth left parenthesis
+			case 0xff62:// harlfwidth left corner bracket
 				return true;
 			}
 
@@ -81,6 +82,11 @@ namespace word_wrap
 			case 0x3002:// full stop
 			case 0x300d:// right corner bracket
 			case 0xff09:// fullwidth right parenthesis
+			case 0xff0c:// fullwidth comma
+			case 0xff0e:// fullwidth full stop
+			case 0xff61:// harlfwidth ideographic full stop
+			case 0xff63:// harlfwidth right corner bracket
+			case 0xff64:// harlfwidth ideographic comma
 				return true;
 			}
 
@@ -238,21 +244,21 @@ namespace word_wrap
 				case CT_SOFT:
 					if(m_chop0 + 1 < i){
 						if(isOpen(m_str[i - 1]) || (isDoNotSplit(c) && !isDoNotSplit(m_str[i - 1]))){
-							m_chop1 = i - 1;
-							m_next_index = i - 1;
-							m_next_chop0 = i - 1;
-							m_next_width = 0;
-							m_next_prev_char_type = 0;
-							m_next_prev_c = 0;
-							goto end;
+							goto chop_back;
 						}
 					}
 					if(isClose(c)){
-						//if(true){// debug
-						if(m_max_width - (width - w) >= w / 2){
+						int w2 = w / 2;
+						if((w2 > 0) && (m_max_width - (width - w) >= w2)){
 							i++;
 							m_chop1 = i;
 							goto skip_space;
+						}
+
+						if(m_chop0 + 1 < i){
+							if((charType(m_str[i - 1]) == CT_SOFT) && !isClose(m_str[i - 1]) && !isDoNotSplit(m_str[i - 1])){
+								goto chop_back;
+							}
 						}
 					}
 					m_chop1 = i;
@@ -263,6 +269,15 @@ namespace word_wrap
 					m_next_prev_c = 0;
 					break;
 				}
+				goto end;
+
+			chop_back:
+				m_chop1 = i - 1;
+				m_next_index = i - 1;
+				m_next_chop0 = i - 1;
+				m_next_width = 0;
+				m_next_prev_char_type = 0;
+				m_next_prev_c = 0;
 				goto end;
 
 			skip_space:
