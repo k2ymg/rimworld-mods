@@ -75,6 +75,21 @@ namespace word_wrap
 			return false;
 		}
 
+		private static bool isFullWidthClose(int c)
+		{
+			switch(c){
+			case 0x3001:// comma
+			case 0x3002:// full stop
+			case 0x300d:// right corner bracket
+			case 0xff09:// fullwidth right parenthesis
+			case 0xff0c:// fullwidth comma
+			case 0xff0e:// fullwidth full stop
+				return true;
+			}
+
+			return false;
+		}
+
 		private static bool isClose(int c)
 		{
 			switch(c){
@@ -247,14 +262,15 @@ namespace word_wrap
 							goto chop_back;
 						}
 					}
-					if(isClose(c)){
+					if(isFullWidthClose(c)){
 						int w2 = w / 2;
 						if((w2 > 0) && (m_max_width - (width - w) >= w2)){
 							i++;
 							m_chop1 = i;
 							goto skip_space;
 						}
-
+					}
+					if(isClose(c)){
 						if(m_chop0 + 1 < i){
 							if((charType(m_str[i - 1]) == CT_SOFT) && !isClose(m_str[i - 1]) && !isDoNotSplit(m_str[i - 1])){
 								goto chop_back;
