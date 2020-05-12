@@ -23,7 +23,7 @@ public static class PatchPathFinder {
 	static PatchPathFinder()
 	{
 		try{
-			var harmony = HarmonyInstance.Create("com.github.k2ymg.improveperformance");
+			var harmony = HarmonyInstance.Create("com.github.k2ymg.simple_pathfinding");
 			patch(harmony);
 		}catch(Exception e){
 			Log.Error(e.ToString());
@@ -48,6 +48,30 @@ public static class PatchPathFinder {
 
 		__result = MyPathFinder.FindPath(start, dest, traverseParms, peMode, map);
 
+#if false
+		Pawn pawn = traverseParms.pawn;
+		if(pawn.Name != null){
+			string name = pawn.Name.ToString();
+			if(name == "name here"){
+				Log.Error("TP mode: " + traverseParms.mode);
+				map.debugDrawer.FlashCell(dest.Cell, 0.5f, "X", 100);
+
+				if(__result.Found){
+					IntVec3 cellBeforeBlocker;
+					Thing thing = __result.FirstBlockingBuilding(out cellBeforeBlocker, pawn);
+					if (thing != null)
+					{
+						map.debugDrawer.FlashCell(cellBeforeBlocker, 0.8f, "X", 100);
+					}
+
+					List<IntVec3> cells = __result.NodesReversed;
+					for(int i = 0; i < cells.Count; i++){
+						map.debugDrawer.FlashCell(cells[i], 0.9f, "X", 100);
+					}
+				}
+			}
+		}
+#endif
 		return false;
 	}
 
@@ -89,9 +113,21 @@ public static class MyPathFinder
 	{
 		if(tp.mode == TraverseMode.ByPawn){
 			Pawn pawn = tp.pawn;
-			if(!pawn.CanReach(dest, peMode, Danger.Deadly, tp.canBash, tp.mode))
+			if(!pawn.CanReach(dest, peMode, Danger.Deadly, tp.canBash, tp.mode)){
+#if false
+				Log.Error("pawn.CanReach failed");
+				Log.Error("name = " + pawn.Name);
+				map.debugDrawer.FlashCell(dest.Cell, 0.5f, "X", 100);
+				map.debugDrawer.FlashLine(start, dest.Cell, 100, SimpleColor.Yellow);
+#endif
 				return PawnPath.NotFound;
+			}
 		}else if(!map.reachability.CanReach(start, dest, peMode, tp)){
+#if false
+			Log.Error("map.reachability.CanReach failed");
+			map.debugDrawer.FlashCell(dest.Cell, 0.5f, "X", 100);
+			map.debugDrawer.FlashLine(start, dest.Cell, 100, SimpleColor.Yellow);
+#endif
 			return PawnPath.NotFound;
 		}
 		
@@ -104,6 +140,7 @@ public static class MyPathFinder
 #if DEBUG_LOG_ERROR
 		if(ret == PawnPath.NotFound){
 			Pawn pawn = tp.pawn;
+			Log.Error("MyPathFinder.findPath failed");
 			Log.Error("path not found: MapSize=" + sMapW + "," + sMapH);
 			Log.Error("path not found: start=" + start.x + "," + start.z);
 			Log.Error("path not found: dstRoot=" + sEndX + "," + sEndY);
@@ -252,6 +289,12 @@ public static class MyPathFinder
 		PawnPath path = sMap.pawnPathPool.GetEmptyPawnPath();
 
 		IntVec3 v = new IntVec3(x, 0, y);
+		int cost;
+		{
+			ref Node node = ref Node_get(x, y);
+			cost = node.c;
+		}
+
 		for(;;){
 			path.AddNode(v);
 			ref Node node = ref Node_get(x, y);
@@ -262,7 +305,7 @@ public static class MyPathFinder
 			y = v.z = xy & 0xffff;
 		}
 
-		path.SetupFound(0, false);
+		path.SetupFound(cost, false);
 		return path;
 	}
 
@@ -370,7 +413,7 @@ public static class MyPathFinder
 		public int g;
 		public int h;
 		public short c;
-		public sbyte door_bit;
+		public sbyte passable_flags;
 		public bool closed; 
 	}
 
@@ -411,19 +454,13 @@ public static class MyPathFinder
 
 			int cost = node.c;
 			if(cost == 0){
-				cost = getMapCost(x, y, out bool is_door);
+				cost = getMapCost(x, y, out node.passable_flags);
 				node.c = (short)cost;
 				if(cost > 0){
 					node.h = distanceToEnd(x, y);
-					if(is_door)
-						node.door_bit = 2;
-					else
-						node.door_bit = 0;
-				}else{
-					node.door_bit = 3;// = 2 | 1
 				}
 			}
-			return node.door_bit;
+			return node.passable_flags;
 		}
 
 		public void update(int parent_cost)
@@ -621,16 +658,17 @@ public static class MyPathFinder
 	public const int DefaultMoveTicksCardinal = 13;
 	public const int DefaultMoveTicksDiagonal = 18;
 
-	private static int getMapCost(int x, int y, out bool is_door)
+	private static int getMapCost(int x, int y, out sbyte passable_flags)
 	{
 		int cell_index = (sMapW * y) + x;
-		is_door = false;
 
 		if(!sAllowWater){
 			if(sTopGrid[cell_index].HasTag("Water")){
-				return -1;
+				goto impassable;
 			}
 		}
+
+		passable_flags = 0;
 
 		Building building = sEdifice[cell_index];
 
@@ -642,22 +680,23 @@ public static class MyPathFinder
 				cost += sTopGrid[cell_index].extraNonDraftedPerceivedPathCost;
 		}else{
 			if(!sPassAllDestroyableThings || building == null || !PathFinder.IsDestroyable(building)){
-				return -1;
+				goto impassable;
 			}
 
 			cost += (int)((float)building.HitPoints * 0.2f) + 70;
+			passable_flags = 2;
 		}
 
 		if(building != null){
 			int c = PathFinder.GetBuildingCost(building, sTraverseParms, sTraverseParms.pawn);
 			if(c == int.MaxValue){
-				return -1;
+				goto impassable;
 			}
 			if((building as Building_Door) != null){
-				if(smallDeadEndRoom(x, y)){
-					return -1;
+				if(!sPassAllDestroyableThings && smallDeadEndRoom(x, y)){
+					goto impassable;
 				}
-				is_door = true;
+				passable_flags = 2;
 			}
 			cost += c;
 		}
@@ -680,12 +719,17 @@ public static class MyPathFinder
 			while(j-- > 0)
 				c = Mathf.Max(c, PathFinder.GetBlueprintCost(list[j], sTraverseParms.pawn));
 			if(c == int.MaxValue){
+				passable_flags = 2 | 1;
 				return -1;
 			}
 			cost += c;
 		}
 
 		return cost + 1;// zero is special value, so always offset + 1.
+
+	impassable:
+		passable_flags = 2 | 1;
+		return -1;
 	}
 
 	private static Area allowedArea(Pawn pawn)
