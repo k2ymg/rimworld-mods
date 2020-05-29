@@ -293,6 +293,8 @@ public static class MyPathFinder
 		{
 			ref Node node = ref Node_get(x, y);
 			cost = node.c;
+			if(cost < 0)
+				cost = 0;
 		}
 
 		for(;;){
@@ -304,6 +306,12 @@ public static class MyPathFinder
 			x = v.x = xy >> 16;
 			y = v.z = xy & 0xffff;
 		}
+
+#if DEBUG_LOG_ERROR
+		if(cost < 0){
+			Log.Error("negative cost");
+		}
+#endif
 
 		path.SetupFound(cost, false);
 		return path;
@@ -719,8 +727,7 @@ public static class MyPathFinder
 			while(j-- > 0)
 				c = Mathf.Max(c, PathFinder.GetBlueprintCost(list[j], sTraverseParms.pawn));
 			if(c == int.MaxValue){
-				passable_flags = 2 | 1;
-				return -1;
+				goto impassable;
 			}
 			cost += c;
 		}
